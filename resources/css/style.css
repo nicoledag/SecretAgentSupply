@@ -1,10 +1,124 @@
 
 
 * {
-   border: 1px solid white;
+   border: 1px solid black;
 }
 
+
+
 body {
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+
+/*Add color: white*/
+}
+
+/*logo*/
+
+.logo .container {
+display: flex;
+align-items: center;
+padding: 12px 0 12px 0.5em;
+}
+
+.container {
+  display: block;
+max-width: 960px;
+margin: 0;
+}
+
+.logo {
+display: block;
+background-color: black;
+color: white;
+}
+
+.logo img {
+height: 1.5rem;
+padding-right: 15px;
+padding-left: 60px;
+}
+
+/*headline*/
+
+.image {
+  background-image: url("../images/moto.jpeg");
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 25em;
+}
+
+.container {
+  display: block;
+  max-width: 960px;
+  margin: 0;
+  }
+
+
+.headline {
+  display: block;
   background-color: black;
   color: white;
+  width: 18em;
+  padding: 2em 3em;
+  position: relative;
+  top: 9em;
+  left: 5em;
+}
+
+.headline h1 {
+font-size: 2rem;
+font-weight: bold;
+padding-top: .25rem;
+margin-top: .25rem;
+}
+
+
+
+/*Navigation*/
+
+.categories {
+  display: flex;
+  justify-content: space-around;
+
+  max-width: 960px;
+}
+
+.categories p {
+  color: white;
+}
+
+nav {
+  background-color: firebrick;
+  color: white;
+}
+
+main {
+  height:
+  width:
+}
+
+.main section {
+height:
+width:
+}
+
+.item {
+height:
+width:
+margin-right:
+margin-bottom:
+
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.product h3 {
+  
 }
