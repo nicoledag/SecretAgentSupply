@@ -1,124 +1,224 @@
+/* "Tamming" Box Model With Reset */
 
-
-* {
-   border: 1px solid black;
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 
+html {
+  font-size: 18px;
+}
+
+h1, h4 {
+  font-weight: bold;
+}
 
 body {
   font-family: Helvetica, sans-serif;
-  font-size: 18px;
-
-/*Add color: white*/
-}
-
-/*logo*/
-
-.logo .container {
-display: flex;
-align-items: center;
-padding: 12px 0 12px 0.5em;
 }
 
 .container {
-  display: block;
-max-width: 960px;
-margin: 0;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
+
+/*Company Header*/
+
 .logo {
-display: block;
 background-color: black;
 color: white;
 }
 
-.logo img {
-height: 1.5rem;
-padding-right: 15px;
-padding-left: 60px;
+.logo .container {
+display: flex;
+align-items: center;
+padding: .66rem 0 .66rem 0.5em;
 }
 
-/*headline*/
+.logo img {
+height: 1.5rem;
+padding-right: 1rem;
+}
+
+/*Main Banner*/
 
 .image {
   background-image: url("../images/moto.jpeg");
-  display: block;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   height: 25em;
 }
 
-.container {
-  display: block;
-  max-width: 960px;
-  margin: 0;
-  }
-
 
 .headline {
-  display: block;
+  position: relative;
+  top: 9rem;
+  width: 20em;
+  padding: 2em 3em;
   background-color: black;
   color: white;
-  width: 18em;
-  padding: 2em 3em;
-  position: relative;
-  top: 9em;
-  left: 5em;
 }
 
 .headline h1 {
+margin: .25rem 0;
 font-size: 2rem;
-font-weight: bold;
-padding-top: .25rem;
-margin-top: .25rem;
+line-height: 1.2;
+}
+
+@media only screen and (max-width:470px)
+{
+  .main-banner {
+    height: 15rem;
+  }
+.headline {
+  width: 100%;
+  padding: 1rem 2rem;
+  top: 10rem;
+}
+
+.headline h4 {
+  font-size: .77rem;
+
+}
+.headline h1 {
+  font-size: 1rem;
+}
+
 }
 
 
 
 /*Navigation*/
 
-.categories {
-  display: flex;
-  justify-content: space-around;
-
-  max-width: 960px;
-}
-
-.categories p {
-  color: white;
-}
-
 nav {
   background-color: firebrick;
   color: white;
 }
 
-main {
-  height:
-  width:
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75em 0;
 }
 
-.main section {
-height:
-width:
-}
 
-.item {
-height:
-width:
-margin-right:
-margin-bottom:
+.mobile-nav {
+  display: none;
 
 }
 
-.flex-container {
+@media only screen and (max-width: 1024px) {
+  nav ul {
+    display: none;
+  }
+.mobile-nav {
+  display: block;
+  text-align: center;
+}
+
+
+}
+/*Product and Business information*/
+
+
+
+.products,
+.business-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.product {
+  width: 30%;
+}
+
+.product-image {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 9rem;
+  padding: 2rem 0;
+  border: 4x solid black;
+}
+
+.product-image img {
+  max-width: 8rem;
+}
+
+.description {
+  display: block;
+  padding: 0.5rem;
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+
+.info {
+  width: 35%;
+}
+
+.info .title {
+  display: block;
+  padding: 1rem 2rem;
+  background-color: black;
+  color: white;
+}
+
+@media only screen and (max-width: 1024px) {
+  .product {
+    width: 47%;
+  }
+.product .glasses {
+  display: none;
+}
+
+@media only screen and (max-width: 470px){
+
+.products,
+.business-info {
   flex-wrap: wrap;
 }
 
-.product h3 {
-  
+.product {
+  width: 90%;
+  margin: auto;
+}
+
+.product.watch {
+  display: none;
+}
+
+.info {
+  width:  90%;
+  margin: 0.5rem auto;
+}
+
+}
+
+
+
+
+/*Footer*/
+
+footer {
+ padding: 5rem 0;
+ margin-top: 4rem;
+ background-color: black;
+ color: white;
+}
+
+}
+
+@media only screen and (max-width: 470px) {
+  footer {
+    text-align: center;
+  }
 }
